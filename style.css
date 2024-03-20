@@ -158,6 +158,49 @@ body {
 	}
 }
 
+@media screen and (max-width: 740px) {
+	.description {
+		padding-bottom: 200px;
+	}
+}
+
+@media screen and (max-width: 642px) {
+	.landing__image {
+		top: 350px;
+	}
+}
+
+@media screen and (max-width: 554px) {
+	.landing__image {
+		top: 400px;
+	}
+}
+@media screen and (max-width: 534px) {
+	.navigation {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 475px) {
+	.description {
+		padding-bottom: 0;
+	}
+	.title {
+		padding-top: 150px;
+		margin: auto;
+		width: 90%;
+	}
+	.description {
+		width: 70%;
+		margin: 20px auto 0;
+	}
+	.landing__image {
+		position: static;
+		width: 100%;
+		margin-top: 150px;
+	}
+}
+
 /* Statistics */
 
 #statistics {
@@ -248,6 +291,34 @@ body {
 	}
 }
 
+@media screen and (max-width: 720px) {
+	#statistics {
+		padding-top: 150px;
+	}
+	.statistics__text {
+		gap: 10%;
+	}
+}
+@media screen and (max-width: 533px) {
+	.statistics__text {
+		flex-direction: column;
+		gap: 30px;
+	}
+	.statistics__text h3,
+	.statistics__text h5 {
+		text-align: center;
+	}
+	.statistics__container {
+		flex-direction: column;
+		gap: 30px;
+	}
+	.statistics__data {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 7%;
+	}
+}
 /* Walkthrough */
 
 #walkthrough {
@@ -357,6 +428,36 @@ body {
 		background-color: var(--primary-color);
 		padding-top: 140px;
 	}
+	.walkthrough__button {
+		width: 30%;
+		margin-top: 100px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.walkthrough__button {
+		width: 100%;
+	}
+	.walkthrough__title,
+	.walkthrough__description {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 457px) {
+	.walkthrough__title {
+		font-size: 2rem;
+	}
+	.walkthrough__description {
+		font-size: 0.9rem;
+	}
+	.walkthrough__button {
+		margin: 50px auto;
+	}
+	.walkthrough__right {
+		margin-top: 80px;
+	}
 }
 
 /* Break Images */
@@ -365,6 +466,9 @@ body {
 	margin-top: 200px;
 	width: 100%;
 	overflow-x: hidden; /* Ensures images do not overflow horizontally */
+	display: none;
+}
+.break-images__container__small {
 	display: none;
 }
 .break-images__container {
@@ -514,11 +618,43 @@ body {
 	}
 }
 
+@media screen and (max-width: 700px) {
+	#break-images {
+		display: none;
+	}
+	.break-images__container__small {
+		display: block;
+		width: 100%;
+	}
+	.break-image__mobile {
+		width: 100%;
+		overflow: hidden;
+		margin-top: 100px;
+	}
+	#work-flow {
+		margin-top: 50px;
+	}
+	.work-flow__title {
+		text-align: center;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 482px) {
+	.work-flow__title {
+		font-size: 2rem;
+	}
+}
+
 /* Projects */
 
 #projects {
 	width: 70%;
 	margin: 200px auto 0;
+}
+
+.projects__items__mobile {
+	display: none;
 }
 
 @media screen and (min-width: 1635px) {
@@ -569,6 +705,16 @@ body {
 	flex-direction: column;
 }
 
+.projects__items__item__mobile {
+	height: 300px;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
 .living-room {
 	background-image: url("images/project1.jpg");
 }
@@ -599,6 +745,23 @@ body {
 
 .projects__items__item__subtitle {
 	font-weight: 300;
+}
+
+@media screen and (max-width: 768px) {
+	#projects {
+		margin-top: 100px;
+	}
+	.projects__items {
+		display: none;
+	}
+	.projects__items__mobile {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+	.projects__items__left {
+		height: 300px;
+	}
 }
 
 /* Testimonials */
@@ -671,6 +834,25 @@ body {
 	.testimonials__image {
 		display: none;
 	}
+	#testimonials {
+		margin-top: 100px;
+	}
+}
+
+@media screen and (max-width: 567px) {
+	.testimonials__text__title h1 {
+		font-size: 2.5rem;
+		text-align: center;
+	}
+	.testimonials__text__description {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 474px) {
+	.testimonials__text__title h1 {
+		font-size: 2rem;
+	}
 }
 
 /* Footer */
@@ -703,4 +885,21 @@ footer h3 {
 
 .footer__links a:hover {
 	color: var(--hover);
+}
+
+@media screen and (max-width: 1027px) {
+	.footer__links {
+		font-size: 0.75rem;
+		margin-left: 10%;
+	}
+}
+
+@media screen and (max-width: 650px) {
+	.footer__links {
+		font-size: 0.5rem;
+	}
+	footer h3 {
+		font-size: 1rem;
+		font-weight: 600;
+	}
 }
