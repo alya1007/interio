@@ -1008,7 +1008,7 @@ footer h3 {
 }
 
 #mascot-message {
-	background-image: url("/images/message-bubble.png");
+	background-image: url("images/message-bubble.png");
 	background-size: contain;
 	background-repeat: no-repeat;
 	height: 50%;
