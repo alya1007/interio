@@ -10,6 +10,24 @@
 	--hover: #e7e3e2;
 }
 
+@keyframes tilt-shaking {
+	0% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(10deg);
+	}
+	50% {
+		transform: rotate(0deg);
+	}
+	75% {
+		transform: rotate(-10deg);
+	}
+	100% {
+		transform: rotate(0deg);
+	}
+}
+
 body {
 	font-family: "Poppins", sans-serif;
 	font-size: var(--font-size);
@@ -974,5 +992,78 @@ footer h3 {
 @media screen and (max-width: 742px) {
 	footer {
 		margin-top: 100px;
+	}
+}
+
+/* Mascot */
+
+.mascot-container {
+	position: fixed;
+	bottom: 0;
+	right: -300px;
+	height: 300px;
+	transition: right 1s ease;
+	z-index: 1000;
+	display: flex;
+}
+
+#mascot-message {
+	background-image: url("/images/message-bubble.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	height: 50%;
+	margin-right: -150px;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	color: white;
+	display: flex;
+	width: 100%;
+	align-items: left;
+}
+
+#mascot-message h6 {
+	margin: auto;
+	margin-left: 45px;
+	margin-top: 45px;
+	width: 40%;
+}
+
+.mascot-container:hover {
+	cursor: pointer;
+}
+.mascot-container:hover #mascot-message {
+	opacity: 1;
+}
+
+#mascot {
+	width: 100%;
+	height: 55%;
+	align-self: flex-end;
+	max-width: fit-content;
+}
+
+.tilt-shake {
+	animation: tilt-shaking 2s infinite;
+	animation-delay: 0s;
+}
+
+.hidden {
+	display: none;
+}
+
+.mascot-container.active {
+	right: 0px;
+}
+
+@media screen and (max-width: 500px) {
+	.mascot-container {
+		height: 200px;
+	}
+	#mascot-message h6 {
+		font-size: 0.7rem;
+		margin: 27px 0 0 30px;
+	}
+	#mascot-message {
+		margin-right: -100px;
 	}
 }
